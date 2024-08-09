@@ -6,6 +6,7 @@ typedef struct {
 	uint32_t PinMask;
 } lcd_pin_t;
 
+/* ####################################################################### */
 
 #define LCD_PIN_SET(LCD_PIN)		(LCD_PIN.GPIO->BSRR |= (LCD_PIN.PinMask & 0x0000FFFFUL))
 #define LCD_PIN_CLR(LCD_PIN)		(LCD_PIN.GPIO->BRR |= LCD_PIN.PinMask)
